@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CoordinatorLayoutTest.iml" filepath="$PROJECT_DIR$/CoordinatorLayoutTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nestedscrolltest/nestedscrolltest.iml" filepath="$PROJECT_DIR$/nestedscrolltest/nestedscrolltest.iml" />
     </modules>
   </component>
 </project>
