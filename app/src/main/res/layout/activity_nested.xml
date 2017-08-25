@@ -7,18 +7,18 @@
     android:layout_height="match_parent"
     >
 
-    <com.example.nestedscrolltest.NestedParentLayout
+    <com.example.coordinatorlayouttest.nested.NestedParentLayout
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_gravity="center"
         android:background="#FF0000">
 
-        <com.example.nestedscrolltest.NestedChildLayout
+        <com.example.coordinatorlayouttest.nested.NestedChildLayout
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             />
 
-    </com.example.nestedscrolltest.NestedParentLayout>
+    </com.example.coordinatorlayouttest.nested.NestedParentLayout>
 
 </FrameLayout>

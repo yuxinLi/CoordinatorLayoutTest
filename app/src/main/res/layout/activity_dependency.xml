@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/iv_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        app:layout_behavior="com.example.coordinatorlayouttest.dependency.MyBehavior"
+        />
+
+    <com.example.coordinatorlayouttest.dependency.DependencyView
+        android:id="@+id/anchor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textSize="24sp"
+        android:text="DependencyView"
+        android:background="#99FF0000"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/anchor"
+        android:text="aaaaaa"
+        app:layout_anchorGravity="top|left"
+        />
+
+
+    <!--<Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="child"
+        android:textSize="24dp"
+        android:padding="5dp"
+        app:layout_behavior="com.example.coordinatorlayouttest.dependency.MyBehavior"
+        />-->
+    
+    <android.support.v4.widget.NestedScrollView
+        android:layout_marginTop="200dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/large_text"
+            />
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,30 +1,38 @@
 package com.example.coordinatorlayouttest;
 
-import android.os.Build;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.coordinatorlayouttest.dependency.DependencyActivity;
+import com.example.coordinatorlayouttest.nested.NestedActivity;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button v = (Button) findViewById(R.id.btn);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
-            v.setNestedScrollingEnabled(true);
-        }
+        findViewById(R.id.btn_dependency).setOnClickListener(this);
+        findViewById(R.id.btn_nestedscroll).setOnClickListener(this);
+    }
 
-        v.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
-                    v.startNestedScroll(View.SCROLL_AXIS_VERTICAL);
-                }
-            }
-        });
+    @Override
+    public void onClick(View v) {
+        Intent i;
+        switch (v.getId()){
+            case R.id.btn_dependency:
+                i = new Intent(this , DependencyActivity.class);
+                break;
+            case R.id.btn_nestedscroll:
+                i = new Intent(this , NestedActivity.class);
+                break;
+            default:
+                i = new Intent(this , DependencyActivity.class);
+                break;
+        }
+        startActivity(i);
     }
 }

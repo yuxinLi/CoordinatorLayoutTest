@@ -1,4 +1,4 @@
-package com.example.nestedscrolltest;
+package com.example.coordinatorlayouttest.nested;
 
 import android.content.Context;
 import android.graphics.Canvas;
