@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.example.coordinatorlayouttest.appbar.AppbarTestActivity;
 import com.example.coordinatorlayouttest.dependency.DependencyActivity;
 import com.example.coordinatorlayouttest.nested.NestedActivity;
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         findViewById(R.id.btn_dependency).setOnClickListener(this);
         findViewById(R.id.btn_nestedscroll).setOnClickListener(this);
+        findViewById(R.id.btn_appbar).setOnClickListener(this);
     }
 
     @Override
@@ -28,6 +30,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_nestedscroll:
                 i = new Intent(this , NestedActivity.class);
+                break;
+            case R.id.btn_appbar:
+                i = new Intent(this , AppbarTestActivity.class);
                 break;
             default:
                 i = new Intent(this , DependencyActivity.class);

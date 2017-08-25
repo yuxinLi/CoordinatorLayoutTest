@@ -19,6 +19,8 @@
 
         <activity android:name=".dependency.DependencyActivity"/>
         <activity android:name=".nested.NestedActivity"/>
+        <activity android:name=".appbar.AppbarTestActivity"/>
+        <activity android:name=".appbar.AppbarLayoutActivity"/>
     </application>
 
 </manifest>
