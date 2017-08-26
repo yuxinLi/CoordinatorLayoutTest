@@ -28,7 +28,7 @@ public class AppbarLayoutActivity extends AppCompatActivity {
 
         appBarLayout = (AppBarLayout) findViewById(R.id.appbar_layout);
 //        collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsingtoolbar);
-//        imageView = (ImageView) findViewById(R.id.test_move);
+        imageView = (ImageView) findViewById(R.id.iv_test);
         Toast.makeText(AppbarLayoutActivity.this," "+appBarLayout.getTotalScrollRange()
                 +" appbar origin height:"+appBarLayout.getHeight(),Toast.LENGTH_LONG).show();
         appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
@@ -36,6 +36,14 @@ public class AppbarLayoutActivity extends AppCompatActivity {
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
                 Log.d(TAG, "onOffsetChanged: "+verticalOffset
                     +" total range:"+appBarLayout.getTotalScrollRange());
+                if (imageView != null){
+                    int newAlpha = 255 + verticalOffset;
+                    if (newAlpha < 0){
+                        newAlpha = 0;
+                    }
+                    imageView.setAlpha(newAlpha);
+                }
+
             }
         });
 

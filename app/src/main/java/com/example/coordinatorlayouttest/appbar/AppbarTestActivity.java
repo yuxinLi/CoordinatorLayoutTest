@@ -30,21 +30,9 @@ public class AppbarTestActivity extends AppCompatActivity implements View.OnClic
         mBtnSnap.setOnClickListener(this);
 
         mBtnCollapsing = (Button) findViewById(R.id.btn_collapseing);
-        mBtnCollapsing.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                Intent intent = new Intent(AppbarTestActivity.this, CollapsingActivity.class);
-//                startActivity(intent);
-            }
-        });
+        mBtnCollapsing.setOnClickListener(this);
         mBtnOffset = (Button) findViewById(R.id.btn_offset);
-        mBtnOffset.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                Intent intent = new Intent(AppbarTestActivity.this, ScrollingActivity.class);
-//                startActivity(intent);
-            }
-        });
+        mBtnOffset.setOnClickListener(this);
     }
 
     @Override
@@ -56,19 +44,24 @@ public class AppbarTestActivity extends AppCompatActivity implements View.OnClic
             case R.id.btn_scroll:
                 intent.putExtra("layout",R.layout.activity_appbar_layout_scroll);
                 break;
-//            case R.id.btn_exit:
-//                intent.putExtra("layout",R.layout.activity_appbar_layout_exit);
-//                break;
-//            case R.id.btn_enter_always:
-//                intent.putExtra("layout",R.layout.activity_appbar_layout_scroll_enter);
-//                break;
-//            case R.id.btn_enter_collapsed:
-//                intent.putExtra("layout",R.layout.activity_appbar_layout_enter_collapsed);
-//                break;
-//            case R.id.btn_snap:
-//                intent.putExtra("layout",R.layout.activity_appbar_layout_snap);
-//                break;
-
+            case R.id.btn_exit:
+                intent.putExtra("layout",R.layout.activity_appbar_layout_exit);
+                break;
+            case R.id.btn_enter_always:
+                intent.putExtra("layout",R.layout.activity_appbar_layout_scroll_enter);
+                break;
+            case R.id.btn_enter_collapsed:
+                intent.putExtra("layout",R.layout.activity_appbar_layout_enter_collapsed);
+                break;
+            case R.id.btn_snap:
+                intent.putExtra("layout",R.layout.activity_appbar_layout_snap);
+                break;
+            case R.id.btn_collapseing:
+                intent.putExtra("layout",R.layout.activity_appbar_layout_collapsed_toolbar);
+                break;
+            case R.id.btn_offset:
+                intent.putExtra("layout",R.layout.activity_appbar_layout_scroll_alpha);
+                break;
             default:
                 break;
         }
