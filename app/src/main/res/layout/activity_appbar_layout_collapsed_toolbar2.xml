@@ -36,7 +36,6 @@
                 android:layout_height="?actionBarSize"
                 android:background="#FF0000"
                 app:title="Toolbar"
-                android:navigationIcon="@mipmap/ic_launcher"
                 />-->
 
             <android.support.v7.widget.Toolbar
